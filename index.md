@@ -1,12 +1,16 @@
-## Welcome to GitHub Pages
+# Welcome to Jacob Wu's GitHub Page!
 
-You can use the [editor on GitHub](https://github.com/jacobwu-b/jacobwu-b.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Come visit me at my personal [homepage](http://jacobwu.org/)!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+To see a sample of my past work, go [here](https://jacobwu.wixsite.com/file-storage).
 
-### Markdown
+Or, get in touch with me via [email](jacob.wu@email.com) or social media (ask me about it!).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Projects
+
+Here is a list of the projects I am currently working on:
+* <a href="page1.md">CS 61A</a>
+* <a href="page2.md">Java 2020 LIL</a>
 
 ```markdown
 Syntax highlighted code block
@@ -14,6 +18,7 @@ Syntax highlighted code block
 # Header 1
 ## Header 2
 ### Header 3
+
 
 - Bulleted
 - List
