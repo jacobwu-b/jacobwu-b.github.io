@@ -4,66 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            resize: vertical;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact Form</h1>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeivJ1Ig1htm0UZhlydmRir3c8sYfMXFBqe8UP71YX1QSLuNA/formResponse" method="GET" target="_blank">
-        <label for="first">First Name:</label>
-        <input type="text" id="first" name="entry.923070967" required><br><br>
+    <div class="container">
+        <h1>Contact Form</h1>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeivJ1Ig1htm0UZhlydmRir3c8sYfMXFBqe8UP71YX1QSLuNA/formResponse" method="GET" target="_blank">
+            
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="entry.452221181" required>
 
-        <label for="last">Last Name:</label>
-        <input type="text" id="last" name="entry.598962698" required><br><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="entry.1220583368" required>
 
-        <label for="company">Company:</label>
-        <input type="text" id="company" name="entry.241317756"><br><br>
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="entry.1893696439">
 
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="entry.1489543855"><br><br>
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="entry.133094072">
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="entry.932847169"><br><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="entry.1908974544" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="entry.1521132913" required><br><br>
+            <label for="bestEmail">Best Contact Email:</label>
+            <input type="email" id="bestEmail" name="entry.133094072" required>
 
-        <label for="phone">Best Phone Number for Calls:</label>
-        <input type="tel" id="phone" name="entry.896725911" required><br><br>
+            <label for="bestPhoneCalls">Best Phone Number for Calls:</label>
+            <input type="tel" id="bestPhoneCalls" name="entry.141950271" required>
 
-        <label for="text">Best Phone Number for Texts:</label>
-        <input type="tel" id="text" name="entry.551248439" required><br><br>
+            <label for="bestPhoneTexts">Best Phone Number for Texts:</label>
+            <input type="tel" id="bestPhoneTexts" name="entry.842374119" required>
 
-        <label for="imessage">Do you have iMessage?:</label>
-        <select id="imessage" name="entry.934804660" required>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select><br><br>
+            <label for="imessage">Do you have iMessage?</label>
+            <select id="imessage" name="entry.244328315" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
 
-        <label for="facetime">Do you have FaceTime?:</label>
-        <select id="facetime" name="entry.173950019" required>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select><br><br>
+            <label for="facetime">Do you have FaceTime?</label>
+            <select id="facetime" name="entry.1808878312" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
 
-        <label for="time">Best Time for Calls:</label>
-        <input type="text" id="time" name="entry.1052354910"><br><br>
+            <label for="bestTime">Best Time for Calls:</label>
+            <input type="text" id="bestTime" name="entry.1108798562">
 
-        <label for="method">Preferred Contact Method:</label>
-        <select id="method" name="entry.1787316749">
-            <option value="Mail">Mail</option>
-            <option value="Phone">Phone</option>
-            <option value="Email">Email</option>
-        </select><br><br>
+            <label for="preferredContact1">Preferred Contact Method - First Choice:</label>
+            <select id="preferredContact1" name="entry.1198453124" required>
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="Mail">Mail</option>
+            </select>
 
-        <label for="consent">Consent to Receive Communication:</label><br>
-        <textarea id="consent" name="entry.834761478" required>I consent to receive communication, including newsletters, updates, and promotional offers, from Jacob Wu. I understand that I can opt out at any time.</textarea><br><br>
+            <label for="preferredContact2">Preferred Contact Method - Second Choice:</label>
+            <select id="preferredContact2" name="entry.1773511880" required>
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="Mail">Mail</option>
+            </select>
 
-        <label for="file">Attach Files (Link to Lark):</label>
-        <input type="url" id="file" name="entry.1514818616"><br><br>
+            <label for="preferredContact3">Preferred Contact Method - Third Choice:</label>
+            <select id="preferredContact3" name="entry.1650003539" required>
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="Mail">Mail</option>
+            </select>
 
-        <label for="priority">Priority Code or Justification:</label>
-        <textarea id="priority" name="entry.1573544049"></textarea><br><br>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="entry.698330501" required>
 
-        <input type="submit" value="Submit">
-    </form>
+            <label for="message">Message:</label>
+            <textarea id="message" name="entry.1380075330" rows="5" required></textarea>
+
+            <label for="consent">Consent to Receive Communication:</label>
+            <textarea id="consent" name="entry.1710882410" rows="3" required>I consent to receive communication, including but not limited to newsletters, updates, and promotional offers, from Jacob Wu via mail, email, or phone. I understand that I can opt out at any time.</textarea>
+
+            <label for="attachFiles">Attach Files (Link to Lark):</label>
+            <input type="url" id="attachFiles" name="entry.698330501">
+
+            <label for="priorityCode">Priority Code:</label>
+            <input type="text" id="priorityCode" name="entry.1380075330">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
