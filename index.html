@@ -1,156 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Inline CSS for demonstration, better to move to styles.css */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #333333;
-            line-height: 1.6;
-        }
-        
-        header {
-            background-color: #f8f8f8;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-        
-        header img {
-            height: 40px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333333;
-            font-weight: 500;
-            font-size: 16px;
-        }
-
-        .hero {
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin: 0;
-            font-weight: 600;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero p {
-            font-size: 24px;
-            margin-top: 10px;
-            font-weight: 300;
-        }
-
-        .content {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .content h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .content p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #0071e3;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            box-shadow: 0 2px 10px rgba(0, 113, 227, 0.3);
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #005bb5;
-            box-shadow: 0 4px 15px rgba(0, 91, 181, 0.4);
-        }
-
-        footer {
-            background-color: #f8f8f8;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        footer a {
-            color: #777;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Jacob Wu | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="shortcut icon" type="image/jpg" href="./img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
+    <!-- Header Section -->
     <header>
-        <img src="logo.png" alt="Your Logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="header-wrapper">
+            <span class="menu-logo hp-viewport fas fa-ellipsis-h"></span>
+            <ul class="header-list">
+                <li class="header-content hp-viewport logo-header"><a href="#"><img class="logo" src="./img/logo.png" alt="Jacob Wu"></a></li>
+                <li class="header-content hp-viewport-hide"><a href="#about">About</a></li>
+                <li class="header-content hp-viewport-hide"><a href="#portfolio">Portfolio</a></li>
+                <li class="header-content hp-viewport-hide"><a href="#blog">Blog</a></li>
+                <li class="header-content hp-viewport-hide"><a href="#contact">Contact</a></li>
+                <li>
+                    <div class="search search-container">
+                        <div class="search-icon" id="searchIcon"><i class="fas fa-search"></i></div>
+                        <div class="search-dropdown" id="searchDropdown">
+                            <input type="text" placeholder="Search...">
+                            <button>Search</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="header-content hp-viewport header-shoping"><a href="#contact" class="fas fa-envelope"></a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <div>
-            <h1>Your Main Headline</h1>
-            <p>Your subheadline goes here</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <div class="container">
+            <div class="contents">
+                <div class="image-container hero-image" style="background-image: url('./img/hero-image.jpg');">
+                    <div class="hero-text">
+                        <h1>Jacob Wu</h1>
+                        <p>Backend Developer | Innovator | Changemaker</p>
+                        <div class="cta-links">
+                            <a href="#portfolio" class="learn-more-link">View Portfolio ></a>
+                            <a href="#contact" class="contact-link">Contact Me ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <section class="content">
-        <h2>Welcome to Our Website</h2>
-        <p>Here’s a brief introduction to what we offer and how we can help you. Feel free to explore our website to learn more about our services and products.</p>
-        <a href="#learn-more" class="button">Learn More</a>
-    </section>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <ul class="flex-list">
+                <li class="li1 content">
+                    <div class="theme-dark container-main" onclick="location.href='#';" style="cursor: pointer;">
+                        <div class="unit-copy-wrapper">
+                            <h2 class="headline">Global CRM Solution</h2>
+                            <p>Transforming commercial efficiency and customer satisfaction.</p>
+                        </div>
+                        <div class="cta-links">
+                            <a href="#portfolio" class="learn-more-link">Learn more ></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="li2 content">
+                    <div class="theme-light container-main" onClick="location.href='#';" style="cursor: pointer;">
+                        <div class="unit-copy-wrapper">
+                            <h2 class="headline">Bible App</h2>
+                            <p>A seamless way to engage with scripture.</p>
+                        </div>
+                        <div class="cta-links">
+                            <a href="#portfolio" class="learn-more-link">Learn more ></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="li3 content">
+                    <div class="theme-dark container-main" onclick="location.href='#';" style="cursor: pointer;">
+                        <div class="unit-copy-wrapper">
+                            <h2 class="headline">Strength Training App</h2>
+                            <p>Empowering you to reach your fitness goals.</p>
+                        </div>
+                        <div class="cta-links">
+                            <a href="#portfolio" class="learn-more-link">Learn more ></a>
+                        </div>
+                    </div>
+                </li>
+                <li class="li4 content">
+                    <div class="theme-light container-main" onclick="location.href='#';" style="cursor: pointer;">
+                        <div class="unit-copy-wrapper">
+                            <h2 class="headline">Articulator</h2>
+                            <p>Enhancing students' active learning experience.</p>
+                        </div>
+                        <div class="cta-links">
+                            <a href="#portfolio" class="learn-more-link">Learn more ></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <h2>Latest Insights</h2>
+            <div class="blog-container">
+                <div class="blog-post">
+                    <h3>Building a Robust Backend</h3>
+                    <p>A deep dive into scalable backend architectures.</p>
+                    <a href="#blog">Read more ></a>
+                </div>
+                <div class="blog-post">
+                    <h3>The Journey to Innovation</h3>
+                    <p>Lessons learned from my startup experience.</p>
+                    <a href="#blog">Read more ></a>
+                </div>
+                <div class="blog-post">
+                    <h3>Embracing Change</h3>
+                    <p>How openness and adaptability fuel growth.</p>
+                    <a href="#blog">Read more ></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Get in Touch</h2>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+            <a href="#contact" class="contact-link">Contact Me ></a>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
-        <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+        <div class="footer-container">
+            <div class="footer-list">
+                <h3>Quick Links</h3>
+                <p><a href="#about">About</a></p>
+                <p><a href="#portfolio">Portfolio</a></p>
+                <p><a href="#blog">Blog</a></p>
+                <p><a href="#contact">Contact</a></p>
+            </div>
+            <div class="footer-list">
+                <h3>Contact Info</h3>
+                <p>Email: <a href="mailto:jacobwu@domain.com">jacobwu@domain.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p>LinkedIn: <a href="linkedin.jacobwu.org">Jacob Wu</a></p>
+            </div>
+        </div>
+        <hr style="width: 70%;">
+        <p class="txt-copy">&copy; 2024 Jacob Wu. All Rights Reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
