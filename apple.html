@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>My Personal Website</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -11,93 +11,78 @@
             padding: 0;
             background-color: #f5f5f7;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
-        header {
-            background-color: #f8f8f8;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            width: 80%;
+            max-width: 1000px;
         }
-        header h1 {
-            font-size: 36px;
-            margin: 0;
-            color: #333;
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #007aff;
-            font-weight: 500;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-        }
-        .content {
+        .tile {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
-        }
-        .content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .content p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: center;
-            max-width: 800px;
-        }
-        .content img {
-            max-width: 100%;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #f8f8f8;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
+            transition: transform 0.3s ease;
         }
-        footer p {
-            margin: 0;
+        .tile:hover {
+            transform: scale(1.05);
+        }
+        .tile img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        .tile label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
             color: #777;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>My Personal Website</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <div class="container">
-        <div class="content">
-            <h2>Welcome to My Personal Space</h2>
-            <p>This is a brief introduction to my work and passions. Feel free to explore and learn more about what I do.</p>
-            <img src="https://via.placeholder.com/1000x500" alt="Placeholder Image">
-        </div>
+    <div class="grid-container">
+        <a href="#about" class="tile">
+            <img src="https://via.placeholder.com/60" alt="About Icon">
+            <label>About</label>
+        </a>
+        <a href="#portfolio" class="tile">
+            <img src="https://via.placeholder.com/60" alt="Portfolio Icon">
+            <label>Portfolio</label>
+        </a>
+        <a href="#blog" class="tile">
+            <img src="https://via.placeholder.com/60" alt="Blog Icon">
+            <label>Blog</label>
+        </a>
+        <a href="#contact" class="tile">
+            <img src="https://via.placeholder.com/60" alt="Contact Icon">
+            <label>Contact</label>
+        </a>
+        <!-- Add more tiles as needed -->
     </div>
 
     <footer>
-        <p>&copy; 2024 My Personal Website. All rights reserved.</p>
+        &copy; 2024 My Personal Website. All rights reserved.
     </footer>
 
 </body>
