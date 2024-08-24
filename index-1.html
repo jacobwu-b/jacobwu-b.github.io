@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Wu | Personal Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- Header Section -->
+<header>
+    <div class="header-wrapper">
+        <a href="#" class="logo"><img src="./img/logo.jpg" alt="Jacob Wu"></a>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Jacob Wu</h1>
+            <p>Backend Developer | Innovator | Changemaker</p>
+            <div class="cta-buttons">
+                <a href="#portfolio" class="cta-button">View Portfolio</a>
+                <a href="#contact" class="cta-button">Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>I'm Jacob Wu, a backend developer with a passion for creating efficient, innovative solutions. With a background in computer science and business, I bridge the gap between technology and strategic business needs. My journey in tech started early, and over the years, I've developed a knack for problem-solving and a deep appreciation for well-architected systems.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2>My Work</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <h3>Global CRM Solution</h3>
+                <p>Transform commercial efficiency and customer satisfaction.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Bible App</h3>
+                <p>Engage with scripture and capture insights.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Autograders</h3>
+                <p>Enhance grading and student learning.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Data Dashboards</h3>
+                <p>Empower data-informed business decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <h2>Blog Posts</h2>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3><a href="blog/20240424.html">Reflections for 2024</a></h3>
+                <p>Life is going well, or so it seems on the surface...</p>
+            </div>
+            <div class="blog-post">
+                <h3>The Journey to Innovation</h3>
+                <p>Lessons learned from my startup experience.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Embracing Change</h3>
+                <p>How openness and adaptability fuel growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Get in Touch</h2>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+        <a href="#contact" >Contact</a>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section id="newsletter" class="newsletter-section">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to my newsletter for the latest updates on my projects and insights.</p>
+        <form>
+            <label>
+                <input type="email" placeholder="Enter your email" required>
+            </label>
+            <button type="submit" class="cta-button">Subscribe</button>
+        </form>
+    </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Jacob Wu. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<style>
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header */
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f8f8f8;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-list li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 700;
+        transition: color 0.3s;
+    }
+
+    .nav-list li a:hover {
+        color: #0073e6;
+    }
+
+    /* Hero Section */
+    .hero {
+        background-image: url('img/hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #0073e6;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #e6f0ff;
+    }
+
+    /* About Me Section */
+    .about-section {
+        padding: 60px 20px;
+        text-align: center;
+        background-color: #f8f8f8;
+    }
+
+    .about-section h2 {
+        margin-bottom: 40px;
+        font-size: 2em;
+    }
+
+    .about-section p {
+        font-size: 1.2em;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+        padding: 60px 20px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .portfolio-section h2 {
+        margin-bottom: 40px;
+        font-size: 2em;
+    }
+
+    .portfolio-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .portfolio-item {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-item h3 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    /* Blog Section */
+    .blog-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .blog-section h2 {
+        margin-bottom: 40px;
+        font-size: 2em;
+    }
+
+    .blog-posts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .blog-post {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-post h3 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 60px 20px;
+        background: linear-gradient(to bottom, #69AFE3, #8578BD);
+        color: white;
+        text-align: center;
+    }
+
+    .contact-section h2 {
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .contact-section p {
+        margin-bottom: 20px;
+        font-size: 1.2em;
+    }
+
+    .contact-section .cta-button {
+        background-color: white;
+        color: #0073e6;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    /* Newsletter Signup Section */
+    .newsletter-section {
+        padding: 60px 20px;
+        background-color: #f8f8f8;
+        text-align: center;
+    }
+
+    .newsletter-section h2 {
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .newsletter-section p {
+        margin-bottom: 20px;
+        font-size: 1.2em;
+    }
+
+    .newsletter-section form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .newsletter-section input[type="email"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+    }
+
+    .newsletter-section button {
+        padding: 10px 20px;
+        background-color: #0073e6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .newsletter-section button:hover {
+        background-color: #005bb5;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+    </style>
+</body>
+</html>

@@ -1,371 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Wu | Personal Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>My iCloud-Style Website</title>
+    <style>
+        @font-face {
+            font-family: 'Ainé';
+            src: url('./fonts/aine.woff2') format('woff2'),
+            url('fonts/aine.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f7;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            width: 100%;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        .header-container .logo {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .logo .jacob-name {
+            font-family: 'Ainé', sans-serif;
+            font-size: 50px;
+            margin-right: 5px;
+        }
+        .header-container .user-dropdown {
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .profile-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .profile-section img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .profile-section a {
+            color: #007aff;
+            text-decoration: none;
+            font-size: 20px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 100px;
+            margin: 100px 0;
+            width: 75%;
+            padding: 0 20px;
+        }
+        .icon-grid-item {
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
+        }
+        .icon-grid-item a {
+            text-decoration: none; /* Removes the underline from the links */
+            color: inherit; /* Ensures the link text inherits the color from the surrounding text */
+        }
+        .icon-grid-item:hover {
+            transform: scale(1.05); /* Slightly enlarge the icon on hover */
+        }
+        .icon-grid-item img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease; /* Smooth transition for the icon */
+        }
+        .icon-grid-item:hover img {
+            transform: translateY(-10px); /* Slightly lift the icon on hover */
+        }
+        .icon-grid-item label {
+            display: block;
+            font-size: 25px;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .profile-section img {
+                width: 150px;
+                height: 150px;
+            }
+            .icon-grid {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
+            .icon-grid-item img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-<!-- Header Section -->
+
 <header>
-    <div class="header-wrapper">
-        <a href="#" class="logo"><img src="./img/logo.jpg" alt="Jacob Wu"></a>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <div class="header-container">
+        <div class="logo">
+            <a href="index-1.html" style="text-decoration: none; color: inherit;">
+                <span class="jacob-name">J</span>
+            </a>
+            <a href="index-1.html" style="text-decoration: none; color: inherit;">
+                acob
+            </a>
+        </div>
+        <div class="user-dropdown">Menu ▼</div>
     </div>
 </header>
 
-<!-- Main Content -->
-<main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Jacob Wu</h1>
-            <p>Backend Developer | Innovator | Changemaker</p>
-            <div class="cta-buttons">
-                <a href="#portfolio" class="cta-button">View Portfolio</a>
-                <a href="#contact" class="cta-button">Contact</a>
-            </div>
-        </div>
-    </section>
+<div class="profile-section">
+    <img src="./img/memoji.png" alt="Profile Picture">
+    <h1><span id="greeting"></span>, my friend.</h1>
+    <a href="#">Join My Newsletter ›</a>
+</div>
 
-    <!-- About Me Section -->
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>I'm Jacob Wu, a backend developer with a passion for creating efficient, innovative solutions. With a background in computer science and business, I bridge the gap between technology and strategic business needs. My journey in tech started early, and over the years, I've developed a knack for problem-solving and a deep appreciation for well-architected systems.</p>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <h2>My Work</h2>
-        <div class="portfolio-items">
-            <div class="portfolio-item">
-                <h3>Global CRM Solution</h3>
-                <p>Transform commercial efficiency and customer satisfaction.</p>
-            </div>
-            <div class="portfolio-item">
-                <h3>Bible App</h3>
-                <p>Engage with scripture and capture insights.</p>
-            </div>
-            <div class="portfolio-item">
-                <h3>Autograders</h3>
-                <p>Enhance grading and student learning.</p>
-            </div>
-            <div class="portfolio-item">
-                <h3>Data Dashboards</h3>
-                <p>Empower data-informed business decisions.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog-section">
-        <h2>Blog Posts</h2>
-        <div class="blog-posts">
-            <div class="blog-post">
-                <h3><a href="blog/20240424.html">Reflections for 2024</a></h3>
-                <p>Life is going well, or so it seems on the surface...</p>
-            </div>
-            <div class="blog-post">
-                <h3>The Journey to Innovation</h3>
-                <p>Lessons learned from my startup experience.</p>
-            </div>
-            <div class="blog-post">
-                <h3>Embracing Change</h3>
-                <p>How openness and adaptability fuel growth.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Get in Touch</h2>
-        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-        <a href="#contact" >Contact</>
-    </section>
-
-    <!-- Newsletter Signup Section -->
-    <section id="newsletter" class="newsletter-section">
-        <h2>Stay Updated</h2>
-        <p>Subscribe to my newsletter for the latest updates on my projects and insights.</p>
-        <form>
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit" class="cta-button">Subscribe</button>
-        </form>
-    </section>
-</main>
-
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Jacob Wu. All Rights Reserved.</p>
+<div class="icon-grid">
+    <div class="icon-grid-item">
+        <a href="contact.html"> <!-- Link to Contact Me page -->
+            <img src="./img/mail.png" alt="Mail Icon">
+            <label>Contact Me</label>
+        </a>
     </div>
-</footer>
+    <div class="icon-grid-item">
+        <a href="biography.html"> <!-- Link to Biography page -->
+            <img src="./img/contacts.png" alt="Contacts Icon">
+            <label>Biography</label>
+        </a>
+    </div>
+    <div class="icon-grid-item">
+        <a href="portfolio.html"> <!-- Link to Projects & Portfolio page -->
+            <img src="./img/photos.png" alt="Photos Icon">
+            <label>Projects & Portfolio</label>
+        </a>
+    </div>
+    <div class="icon-grid-item">
+        <a href="life-story.html"> <!-- Link to Life Story page -->
+            <img src="./img/icloud.png" alt="iCloud Drive Icon">
+            <label>Life Story</label>
+        </a>
+    </div>
+    <div class="icon-grid-item">
+        <a href="blog.html"> <!-- Link to Blog Posts page -->
+            <img src="./img/notes.png" alt="Notes Icon">
+            <label>Blog Posts</label>
+        </a>
+    </div>
+    <div class="icon-grid-item">
+        <a href="ongoing-projects.html"> <!-- Link to Ongoing Projects page -->
+            <img src="./img/reminders.png" alt="Reminders Icon">
+            <label>Ongoing Projects</label>
+        </a>
+    </div>
+    <div class="icon-grid-item">
+        <a href="publications.html"> <!-- Link to Publications page -->
+            <img src="./img/pages.png" alt="Pages Icon">
+            <label>Publications</label>
+        </a>
+    </div>
+    <div class="icon-grid-item">
+        <a href="data.html"> <!-- Link to Data page -->
+            <img src="./img/numbers.png" alt="Numbers Icon">
+            <label>Data</label>
+        </a>
+    </div>
+    <div class="icon-grid-item">
+        <a href="presentations.html"> <!-- Link to Presentations page -->
+            <img src="./img/keynote.png" alt="Keynote Icon">
+            <label>Presentations</label>
+        </a>
+    </div>
+</div>
 
-<style>
-    /* Basic Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+<script>
+    function updateGreeting() {
+        const currentHour = new Date().getHours();
+        let greeting;
+
+        if (currentHour < 12) {
+            greeting = "Good morning";
+        } else if (currentHour < 18) {
+            greeting = "Good afternoon";
+        } else {
+            greeting = "Good evening";
+        }
+
+        document.getElementById("greeting").textContent = greeting;
     }
 
-    body {
-        font-family: 'Roboto', sans-serif;
-        color: #333;
-        line-height: 1.6;
-    }
+    updateGreeting(); // Call the function when the page loads
+</script>
 
-    /* Header */
-    .header-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        background-color: #f8f8f8;
-    }
-
-    .logo img {
-        height: 40px;
-    }
-
-    .nav-list {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-    }
-
-    .nav-list li a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 700;
-        transition: color 0.3s;
-    }
-
-    .nav-list li a:hover {
-        color: #0073e6;
-    }
-
-    /* Hero Section */
-    .hero {
-        background-image: url('img/hero-bg.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        color: white;
-        text-align: center;
-        padding: 0 20px;
-    }
-
-    .hero h1 {
-        font-size: 3em;
-        font-weight: 700;
-        margin-bottom: 10px;
-    }
-
-    .hero p {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-
-    .cta-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-        background-color: #fff;
-        color: #0073e6;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: 700;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    .cta-button:hover {
-        background-color: #e6f0ff;
-    }
-
-    /* About Me Section */
-    .about-section {
-        padding: 60px 20px;
-        text-align: center;
-        background-color: #f8f8f8;
-    }
-
-    .about-section h2 {
-        margin-bottom: 40px;
-        font-size: 2em;
-    }
-
-    .about-section p {
-        font-size: 1.2em;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    /* Portfolio Section */
-    .portfolio-section {
-        padding: 60px 20px;
-        background-color: #fff;
-        text-align: center;
-    }
-
-    .portfolio-section h2 {
-        margin-bottom: 40px;
-        font-size: 2em;
-    }
-
-    .portfolio-items {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .portfolio-item {
-        background-color: #f8f8f8;
-        padding: 20px;
-        border-radius: 10px;
-        width: 300px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .portfolio-item h3 {
-        margin-bottom: 10px;
-        font-size: 1.5em;
-    }
-
-    /* Blog Section */
-    .blog-section {
-        padding: 60px 20px;
-        text-align: center;
-    }
-
-    .blog-section h2 {
-        margin-bottom: 40px;
-        font-size: 2em;
-    }
-
-    .blog-posts {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .blog-post {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        width: 300px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .blog-post h3 {
-        margin-bottom: 10px;
-        font-size: 1.5em;
-    }
-
-    /* Contact Section */
-    .contact-section {
-        padding: 60px 20px;
-        background: linear-gradient(to bottom, #69AFE3, #8578BD);
-        color: white;
-        text-align: center;
-    }
-
-    .contact-section h2 {
-        margin-bottom: 20px;
-        font-size: 2em;
-    }
-
-    .contact-section p {
-        margin-bottom: 20px;
-        font-size: 1.2em;
-    }
-
-    .contact-section .cta-button {
-        background-color: white;
-        color: #0073e6;
-        border-radius: 5px;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-weight: 700;
-    }
-
-    /* Newsletter Signup Section */
-    .newsletter-section {
-        padding: 60px 20px;
-        background-color: #f8f8f8;
-        text-align: center;
-    }
-
-    .newsletter-section h2 {
-        margin-bottom: 20px;
-        font-size: 2em;
-    }
-
-    .newsletter-section p {
-        margin-bottom: 20px;
-        font-size: 1.2em;
-    }
-
-    .newsletter-section form {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .newsletter-section input[type="email"] {
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 1em;
-    }
-
-    .newsletter-section button {
-        padding: 10px 20px;
-        background-color: #0073e6;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .newsletter-section button:hover {
-        background-color: #005bb5;
-    }
-
-    /* Footer */
-    footer {
-        background-color: #f8f8f8;
-        padding: 20px;
-        text-align: center;
-    }
-
-    footer p {
-        font-size: 0.9em;
-    }
-    </style>
 </body>
 </html>
